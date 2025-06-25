@@ -3,7 +3,7 @@ voice interaction via a chat-style interface and audio playback.
 
 AI Voice FAQ Assistant
 
-This project is a simulated **AI-powered voice-based customer support agent** built using **Streamlit**. It can answer user queries based on a provided FAQ document using voice or text, and provides real-time transcription with downloadable logs.
+The AI Voice FAQ Assistant is built to simulate a customer support voice agent that can answer queries based on a structured FAQ document. It combines streaming audio input/output, semantic search, and a real-time interface to handle customer conversations.
 
 ---
 
@@ -47,6 +47,16 @@ voice_faq_agent/
 ## Run the App
 
   - streamlit run voice_agent.py
+
+## System Components
+
+  Layer	          |        Components	                                  |       Description
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ Interface	      |       Streamlit UI	                                |    Simulated call interface with Start/End buttons and voice/text input
+ NLP Engine	      |       sentence-transformers + FAISS	                |    Embeds the FAQ text and retrieves the most relevant answer based on semantic similarity
+ Speech	          |       speech_recognition (STT), pyttsx3 (TTS)	      |    Converts user voice input to text and agent responses back to speech
+ Knowledge Base	  |       faq.txt	                                      |    Preprocessed version of the FAQ PDF, organized as Q&A paragraphs
+ Transcripts	    |       .txt files                                    |   	Each call's conversation is saved locally and can be downloaded from the UI
 
 ## How It Works
 
