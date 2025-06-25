@@ -1,0 +1,8 @@
+streamlit==1.35.0                # for the UI
+sentence-transformers==2.6.1     # for semantic embedding
+faiss-cpu==1.7.4                 # for fast semantic search
+SpeechRecognition==3.10.1        # for mic input (STT)
+pyttsx3==2.90                    # for text-to-speech output (offline/local)
+pyaudio==0.2.13                  # for microphone access
+numpy==1.24.4                    # used internally by FAISS and transformers
+
