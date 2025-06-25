@@ -71,7 +71,14 @@ voice_faq_agent/
 
   - Store FAQs in plain text (data/faq.txt)
 
-Format:
+## Error Handling
+
+  - Mic access or STT failure → Shows a clear warning
+  - Unrecognized audio → Returns fallback message
+  - Missing FAQ or formatting issues → Handled during FAQ parsing
+  - Network services like OpenAI APIs → Handled via fallback STT option
+
+## Format:
 
 Question?
 Answer in full sentences.
@@ -83,6 +90,7 @@ Answer in full sentences.
 
 ## Tech Stack
 
+  - Python 3.12
   - Streamlit
   - sentence-transformers
   - FAISS
